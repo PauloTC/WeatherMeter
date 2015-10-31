@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Platzi Wheater</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header class="main-header">
+		<h1>Weather Meter</h1>
+		<h2>An awsome way to see how me burn by global warming</h2>
+	</header>
+
+	<div class="loader">Geolocalizando tu posicion, porfavor espere</div>
+
+	<form action="" class="search">
+		<input type="text" data-input='cityAdd' class="search__text" placeholder="Agregar una nueva cuidad">
+		<input type="submit" data-button='add' class="btn" value="Añadir una nueva cuidad">
+		<button data-saved-cities class="search__btn btn" >Ver cuidades</button>
+	</form>
+
+	<main class="cards-group">
+		<template id="template--city">
+			<div class="card">
+				<header class="card__header">
+					<h3 data-city class="card__title"></h3>
+					<h4 data-time class="card__time"></h4>
+				</header>
+				<div class="card__info">
+					<img data-icon class="card__image"></img>
+					<span data-temp='max' class="card__maxt"></span>
+					<span data-temp='min' class="card__mint"></span>
+					<span data-temp='current' class="card__temp"></span>
+				</div>
+			</div>
+		</template>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
